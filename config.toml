@@ -19,14 +19,16 @@ publishDir = "content"
 
 [params.index]
   picture = "/raphazilla/images/author.jpg"
-  title = "Rapha"
+  title = "Rapha here!"
   subtitle = "I'm a unique placeholder. Working here and there!"
   mdtext = '''
-Currently trying to get this blog running, still don't know what the blog will be about!\
-**This textblock is a demonstration of the mdtext-param.**\
-### This is a markdown heading
+👋 Hi there! I'm a Senior System Administrator with over 15 years of experience, specializing in Resilience and Data Backup and Recovery. I thrive in managing mission-critical systems and securing diverse workloads. 🛡️💻
+
+I've had the privilege of contributing my skills to Big Tech companies, offering support to various industries, including Pharma and Chemical sectors. 🏭
+
+Being naturally curious, I'm always on the lookout for something new to learn. Whether it's the latest technologies, exploring art and music, delving into history, or immersing myself in the wonders of nature, I'm passionate about expanding my knowledge and skills. 🌟 Let's connect and explore the exciting world of technology and beyond! 🚀
 '''
-  alertbar = false
+  alertbar = true
 
 [params.social]
   github = "prosillo"
