@@ -1,33 +1,57 @@
-baseURL = "http://prosillo.github.io/raphazilla"
+baseURL = "https://prosillo.github.io/raphazilla/"
 languageCode = "en-us"
 title = "Raphazilla"
 theme = "mediumish-gohugo-theme"
 summaryLength = 25
 copyright = "Rapha Prosillo - All rights reserved"
+enableEmoji = true
+publishDir = "content"
+#disqusShortname = "your-shortname-here"
+#googleAnalytics = "UA-1XXXXXXX1-1"
 
 [params]
-  logo = "/static/logo.png"
-  description = "Raphazilla blog"
-  #customCSS = ["css/tweaks.css", "css/customHeader.css"]
+  logo = "/images/logo.png"
+  description ="the clean blog!"
+  #mailchimp = "you can provide a mailchimp-link here"
 
 [params.author]
-  name = "Raphazilla"
+  name = "Rapha"
   thumbnail = "/images/author.png"
   description = "Creator of this blog."
 
 [params.index]
   picture = "/images/author.png"
-  title = "Raphazilla"
+  title = "Rapha"
   subtitle = "I'm a unique placeholder. Working here and there!"
-  mdtext = '''Currently trying to get this blog running, still don't know what the blog will be about!
-\**This textblock is a demonstration of the mdtext-param.**\
-### This is a markdown heading'''
-  alertbar = true
+  mdtext = '''
+Currently trying to get this blog running, still don't know what the blog will be about!\
+**This textblock is a demonstration of the mdtext-param.**\
+### This is a markdown heading
+'''
+  alertbar = false
 
 [params.social]
   github = "prosillo"
-  linkedin = "<username>"
-  xing = "<username>"
-  medium = "<username>"
-  twitter = "<username>"
-  instagram = "<username>"
+  linkedin = "raphael.prosillo"
+
+## Main Menu
+[[menu.main]]
+    name = "Blog"
+    weight = 100
+    identifier = "blog"
+    url = "/blog"
+[[menu.main]]
+    name = "Separate"
+    weight = 100
+    identifier = "separate"
+    url = "/separate"
+[[menu.main]]
+    name = "About Me"
+    identifier = "about"
+    weight = 200
+    url = "/"
+[[menu.main]]
+    name = "Imprint"
+    identifier = "imprint"
+    weight = 200
+    url = "/static/imprint"
