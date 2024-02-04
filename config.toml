@@ -6,7 +6,7 @@ summaryLength = 25
 copyright = "Rapha Prosillo - All rights reserved"
 
 [params]
-  logo = "static/images/logo.png"
+  logo = "static/logo.png"
   description = "Raphazilla blog"
   #customCSS = ["css/tweaks.css", "css/customHeader.css"]
 
