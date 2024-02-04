@@ -6,7 +6,7 @@ summaryLength = 25
 copyright = "Rapha Prosillo - All rights reserved"
 
 [params]
-  logo = "/images/logo.png"
+  logo = "static/images/logo.png"
   description = "Raphazilla blog"
   #customCSS = ["css/tweaks.css", "css/customHeader.css"]
 
@@ -17,7 +17,7 @@ copyright = "Rapha Prosillo - All rights reserved"
 
 [params.index]
   picture = "/images/author.png"
-  title = "John Doe"
+  title = "Raphazilla"
   subtitle = "I'm a unique placeholder. Working here and there!"
   mdtext = '''Currently trying to get this blog running, still don't know what the blog will be about!
 \**This textblock is a demonstration of the mdtext-param.**\
