@@ -9,8 +9,6 @@ tags:
 image: "/images/blog/1.jpg"
 comments: false
 ---
-# Desvendando o Cloud-init: Uma Introdução
-
 ![Cloud-init](imagem-cloud-init.png)
 
 Você já se perguntou como as instâncias em nuvem são inicializadas automaticamente com todas as configurações necessárias? Bem, é aqui que o Cloud-init entra em ação. Neste post, vamos explorar o que é o Cloud-init, como funciona e como ele pode simplificar a inicialização de suas máquinas virtuais na nuvem.
@@ -46,9 +44,12 @@ users:
 runcmd:
   - git clone https://github.com/exemplo/repo.git
   - cd repo && ./setup.sh
+```
 
 # Benefícios do Cloud-init
+
 **Automatização:** Automatiza a configuração inicial de instâncias, economizando tempo e esforço.
 **Portabilidade:** Funciona em várias plataformas de nuvem, proporcionando uma abordagem consistente.
 **Flexibilidade:** Permite personalizar a configuração de acordo com as necessidades específicas do ambiente.
+
 Se você ainda não está utilizando o Cloud-init em seus projetos, pode ser a hora de explorar como essa ferramenta pode simplificar e agilizar a implementação e configuração de suas instâncias em nuvem.
