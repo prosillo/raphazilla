@@ -49,7 +49,9 @@ runcmd:
 # Benefícios do Cloud-init
 
 **Automatização:** Automatiza a configuração inicial de instâncias, economizando tempo e esforço.
+
 **Portabilidade:** Funciona em várias plataformas de nuvem, proporcionando uma abordagem consistente.
+
 **Flexibilidade:** Permite personalizar a configuração de acordo com as necessidades específicas do ambiente.
 
 Se você ainda não está utilizando o Cloud-init em seus projetos, pode ser a hora de explorar como essa ferramenta pode simplificar e agilizar a implementação e configuração de suas instâncias em nuvem.
