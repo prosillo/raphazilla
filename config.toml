@@ -40,17 +40,7 @@ Being naturally curious, I'm always on the lookout for something new to learn. W
     identifier = "blog"
     url = "/blog"
 [[menu.main]]
-    name = "Separate"
-    weight = 100
-    identifier = "separate"
-    url = "/separate"
-[[menu.main]]
     name = "About Me"
     identifier = "about"
     weight = 200
     url = "/"
-[[menu.main]]
-    name = "Imprint"
-    identifier = "imprint"
-    weight = 200
-    url = "/static/imprint"
