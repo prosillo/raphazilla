@@ -9,13 +9,12 @@ publishDir = "content"
 
 [params]
   logo = "/raphazilla/images/logo.png"
-  description ="the clean blog!"
-  #mailchimp = "you can provide a mailchimp-link here"
+  description ="Another Techblog.."
 
 [params.author]
   name = "Rapha"
   thumbnail = "/raphazilla/images/author.jpg"
-  description = "Creator of this blog."
+  description = "Lifelong Learner, Senior System Administrator, Cloud and DevOps enthusiatic, IaC advocate and Gardener"
 
 [params.index]
   picture = "/raphazilla/images/author.jpg"
