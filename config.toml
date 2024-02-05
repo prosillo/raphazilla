@@ -18,14 +18,15 @@ publishDir = "content"
 
 [params.index]
   picture = "/raphazilla/images/author.jpg"
-  title = "Rapha here!"
+  title = "Rapha here!😎"
   subtitle = "Brazilian guys living in the amazing Czech Republic!"
   mdtext = '''
-👋 Hi there! I'm a Senior System Administrator with over 15 years of experience, specializing in Resilience and Data Backup and Recovery. I thrive in managing mission-critical systems and securing diverse workloads. 🛡️💻
+# 👋 Olá pessoal!
 
-I've had the privilege of contributing my skills to Big Tech companies, offering support to various industries, including Pharma and Chemical sectors. 🏭
-
-Being naturally curious, I'm always on the lookout for something new to learn. Whether it's the latest technologies, exploring art and music, delving into history, or immersing myself in the wonders of nature, I'm passionate about expanding my knowledge and skills. 🌟 Let's connect and explore the exciting world of technology and beyond! 🚀
+Sou o Rapha , um Administrador de Sistemas Sênior com mais de 15 anos de experiência, especializado em Resiliência e Backup e Recuperação de Dados. Tenho experiência em gerenciar sistemas críticos e garantir a segurança de cargas de trabalho diversas. 🛡️💻
+Ao longo da minha carreira, tive o privilégio de contribuir com minhas habilidades para grandes empresas de tecnologia, oferecendo suporte a diversas indústrias, incluindo os setores farmacêutico e químico. 🏭
+Com uma curiosidade natural, estou sempre em busca de algo novo para aprender. Seja as últimas tecnologias, explorar arte e música, mergulhar na história ou imergir nas maravilhas da natureza, sou apaixonado por expandir meu conhecimento e habilidades. 
+🌟 Vamos nos conectar e explorar o emocionante mundo da tecnologia e além! 🚀
 '''
   alertbar = true
 
