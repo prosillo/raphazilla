@@ -6,10 +6,10 @@ tags:
   - Cloud-init
   - Automação
   - Infraestrutura como Código
-image: "/images/blog/1.jpg"
+image: "/images/blog/imagem-cloud-init.png"
 comments: false
 ---
-![Cloud-init](imagem-cloud-init.png)
+![Cloud-init](/images/blog/imagem-cloud-init.png)
 
 Você já se perguntou como as instâncias em nuvem são inicializadas automaticamente com todas as configurações necessárias? Bem, é aqui que o Cloud-init entra em ação. Neste post, vamos explorar o que é o Cloud-init, como funciona e como ele pode simplificar a inicialização de suas máquinas virtuais na nuvem.
 
