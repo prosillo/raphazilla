@@ -9,8 +9,6 @@ tags:
 image: "/raphazilla/images/blog/imagem-cloud-init.png"
 comments: true
 ---
-# Desvendando o Cloud-init e Virt-customize: Simplificando a Configuração de Máquinas Virtuais
-
 ![Cloud-init](/raphazilla/images/blog/imagem-cloud-init.png)
 
 ## Introdução
