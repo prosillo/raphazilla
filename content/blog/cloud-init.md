@@ -7,7 +7,7 @@ tags:
   - Automação
   - Infraestrutura como Código
 image: "/raphazilla/images/blog/imagem-cloud-init.png"
-comments: true
+comments: false
 ---
 ![Cloud-init](/raphazilla/images/blog/imagem-cloud-init.png)
 
