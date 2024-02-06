@@ -6,6 +6,8 @@ summaryLength = 25
 copyright = "Rapha Prosillo - All rights reserved"
 enableEmoji = true
 publishDir = "content"
+disqusShortname = "raphazilla"
+googleAnalytics = "G-6SVRZ2T5RW"
 
 [params]
   logo = "/raphazilla/images/logo2.jpg"
@@ -14,7 +16,7 @@ publishDir = "content"
 [params.author]
   name = "Rapha"
   thumbnail = "/raphazilla/images/author.jpg"
-  description = "Lifelong Learner, Senior System Administrator, Cloud and DevOps enthusiatic, IaC advocate and Gardener"
+  description = "Lifelong Learner, Senior System Administrator, Cloud and DevOps enthusiastic, IaC advocate and Gardener"
 
 [params.index]
   picture = "/raphazilla/images/author.jpg"
