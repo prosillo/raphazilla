@@ -1,4 +1,4 @@
-baseURL = "https://prosillo.github.io/raphazilla/"
+baseURL = "https://raphazilla.github.io/raphazilla/"
 languageCode = "en-us"
 title = "Raphazilla"
 theme = "mediumish-gohugo-theme"
