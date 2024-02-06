@@ -32,8 +32,9 @@ Com uma curiosidade natural, estou sempre em busca de algo novo para aprender. S
   alertbar = true
 
 [params.social]
-  github = "prosillo"
+  github = "raphazilla"
   linkedin = "raphaelprosillo"
+  twitter = "ollisorp"
 
 ## Main Menu
 [[menu.main]]
