@@ -1,0 +1,25 @@
+{{ define "main" }}
+  <section class="section-sm text-center">
+    <div class="container">
+      <div class="row justify-center">
+        <div class="sm:col-10 md:col-8 lg:col-6">
+          <span
+            class="text-[8rem] block font-bold text-dark dark:text-darkmode-dark">
+            404
+          </span>
+          <h1 class="h2 mb-4">Pagina nao encontrada</h1>
+          <div class="content">
+            <p>
+              A pagina que voce esta tentando acessar pode ter sido movida ou removida.
+            </p>
+          </div>
+          <a
+            href="{{ site.BaseURL | relLangURL }}"
+            class="btn btn-primary mt-8">
+            De volta a Home
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+{{ end }}
