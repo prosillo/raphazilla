@@ -47,8 +47,3 @@ Com uma curiosidade natural, estou sempre em busca de algo novo para aprender. S
     identifier = "about"
     weight = 200
     url = "/"
-
-[[redirects]]
-  from = '/**'
-  status = 404
-  to = '404.html'

@@ -7,7 +7,7 @@ tags:
   - QEMU
   - Cloud-init
   - Infraestrutura como Código
-image: "/raphazilla/images/blog/imagem-cloud-init.png"
+image: "/raphazilla/images/blog/imagem-kvm-qemu.png"
 comments: true
 ---
 ![KVM e QEMU](/raphazilla/images/blog/imagem-kvm-qemu.png)
