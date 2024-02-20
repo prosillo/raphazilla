@@ -1,5 +1,7 @@
 <div align="center">
+  <a href="https://raphazilla.github.io/raphazilla/blog/" target="_blank">
   <img height="150" src="https://github.com/raphazilla/raphazilla/blob/b2d61dda8c4f2f6b27fa5bdc11bfc2cb1e6bab62/static/images/logo2.jpg?raw=true"  />
+  </a>
 </div>
 
 ###
