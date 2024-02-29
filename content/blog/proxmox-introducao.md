@@ -10,9 +10,6 @@ tags:
 image: "/raphazilla/images/blog/imagem-kvm-qemu.png"
 comments: true
 ---
-
-# Introdução ao Proxmox: Gerenciamento Eficiente de Virtualização e Containers
-
 ![Introdução ao Proxmox](/raphazilla/images/blog/imagem-proxmox.png)
 
 ## Desvendando o Proxmox VE
