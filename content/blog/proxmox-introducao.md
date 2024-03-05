@@ -7,7 +7,7 @@ tags:
   - Virtualização de Servidores
   - VMware
   - ESXi
-image: "/raphazilla/images/blog/imagem-kvm-qemu.png"
+image: "/raphazilla/images/blog/imagem-proxmox.png"
 comments: true
 ---
 ![Introdução ao Proxmox](/raphazilla/images/blog/imagem-proxmox.png)
