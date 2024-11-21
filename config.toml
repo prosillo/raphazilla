@@ -15,7 +15,7 @@ googleAnalytics = "G-6SVRZ2T5RW"
 
 [params.author]
   name = "Rapha"
-  thumbnail = "/raphazilla/images/author.jpg"
+  thumbnail = "/raphazilla/images/author.png"
   description = "Lifelong Learner, Senior System Administrator, Cloud and DevOps enthusiastic, IaC advocate and Gardener"
 
 [params.index]
