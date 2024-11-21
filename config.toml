@@ -19,7 +19,7 @@ googleAnalytics = "G-6SVRZ2T5RW"
   description = "Lifelong Learner, Senior System Administrator, Cloud and DevOps enthusiastic, IaC advocate and Gardener"
 
 [params.index]
-  picture = "/raphazilla/images/author.jpg"
+  picture = "/raphazilla/images/author.png"
   title = "Rapha here!😎"
   subtitle = "Brazilian guys living in the amazing Czech Republic!"
   mdtext = '''
