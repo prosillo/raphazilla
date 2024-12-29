@@ -1,0 +1,28 @@
+{
+  "name": "raphazilla",
+  "version": "1.0.0",
+  "description": "<div align=\"center\">   <a href=\"https://raphazilla.github.io/raphazilla/blog/\" target=\"_blank\">   <img height=\"150\" src=\"https://github.com/raphazilla/raphazilla/blob/b2d61dda8c4f2f6b27fa5bdc11bfc2cb1e6bab62/static/images/logo2.jpg?raw=true\"  />   </a> </div>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raphazilla/raphazilla.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raphazilla/raphazilla/issues"
+  },
+  "homepage": "https://github.com/raphazilla/raphazilla#readme",
+  "dependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17"
+  },
+  "scripts": {
+    "build:css": "tailwindcss -i ./assets/css/tailwind.css -o ./static/css/tailwind.css --watch"
+  }
+}

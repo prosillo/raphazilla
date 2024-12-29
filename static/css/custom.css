@@ -1,0 +1,13 @@
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Certifique-se de que a barra está acima de outros elementos */
+    background-color: white; /* Ajuste conforme necessário */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra para destaque */
+}
+
+/* Adiciona um padding ao corpo para evitar que o conteúdo fique escondido atrás do cabeçalho */
+body {
+    padding-top: 60px; /* Ajuste conforme a altura do seu cabeçalho */
+}
