@@ -7,7 +7,6 @@ disqusShortname = "raphazilla"
 googleAnalytics = "G-6SVRZ2T5RW"
 languageCode = "pt-br"
 defaultContentLanguage = "pt-br"
-pagination.pagerSize = 5
 enableRobotsTXT = true
 
 [languages]
