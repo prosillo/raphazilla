@@ -1,7 +1,6 @@
 ---
 title: Blog
-description: "Lista de posts no blog."
+description: Read here my posts about technology, programming and other subjects.
+summary: Read here my posts about technology, programming and other subjects.
 layout: "list"
 ---
-
-# Test English
