@@ -1,0 +1,41 @@
+- id: prev_page
+  translation: "Página Anterior"
+
+- id: next_page
+  translation: "Próxima Página"
+
+- id: read_time
+  translation:
+    one: "1 minuto"
+    other: "{{ .Count }} minutos"
+
+- id: words
+  translation:
+    one : "palavra"
+    other: "{{ .Count }} palavras"
+
+- id: toc
+  translation: "Conteúdo"
+
+- id: translations
+  translation: "Traduções"
+  
+- id: home
+  translation: "Início"
+
+- id: edit_post
+  translation: "Editar 📝"
+
+- id: code_copy
+  translation: "copiar"
+
+- id: code_copied
+  translation: "copiado!"
+
+- id: homeTitle
+  translation: "Raphazilla"
+
+- id: homeContent
+  translation: |
+    👋 Olá, entusiastas de tecnologia!
+    Bem-vindos ao Raphazilla, seu destino para explorar as últimas tendências em tecnologia, automação e práticas de DevOps. Sou Rapha, um apaixonado por inovação e eficiência. Aqui, você encontrará artigos detalhados, tutoriais práticos e insights valiosos para aprimorar suas habilidades e conhecimentos no mundo tech. Junte-se à nossa comunidade e fique por dentro das novidades que estão moldando o futuro da tecnologia. 🚀

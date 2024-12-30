@@ -1,16 +1,20 @@
 ---
 title: "Desvendando o Cloud-init e Virt-customize: Simplificando a Configuração de Máquinas Virtuais"
 date: 2024-02-05
+lastmod: 
 draft: false
 tags:
   - Cloud-init
   - Automação
   - Infraestrutura como Código
-image: "/raphazilla/images/blog/imagem-cloud-init.png"
+cover:
+  image: "imagem-cloud-init.png"
+  relative: true
 comments: true
+author: "Rapha"
+avatar: "/images/author.png"
+TocOpen: true
 ---
-![Cloud-init](/raphazilla/images/blog/imagem-cloud-init.png)
-
 ## Introdução
 
 Configurar máquinas virtuais em ambientes de nuvem pode ser uma tarefa desafiadora, mas ferramentas como **Cloud-init** e **Virt-customize** tornam esse processo mais eficiente e flexível. Neste artigo, vamos explorar o Cloud-init e apresentar o uso do Virt-customize para personalizar imagens de máquinas virtuais.
