@@ -1,5 +1,5 @@
 ---
-title: PaperMod
-summary: Contains posts related to `PaperMod`
-description: Contains posts related to PaperMod
+title: Blog
+summary: Leia aqui meus posts sobre tecnologia, programação e outros assuntos.
+description: Leia aqui meus posts sobre tecnologia, programação e outros assuntos.
 ---
