@@ -30,7 +30,7 @@ defaults:
 jobs:
   # Build job
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     env:
       HUGO_VERSION: 0.140.1
     steps:
@@ -57,8 +57,7 @@ jobs:
         run: |
           hugo \
             --gc \
-            --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"          
+            --minify \        
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
