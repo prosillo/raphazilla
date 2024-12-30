@@ -65,10 +65,10 @@ languages:
     menu:
       main:
         - name: Blog
-          url: /en-us/blog
+          url:  /raphazilla/en-us/blog
           weight: 10
         - name: About
-          url: /en-us/about
+          url: /raphazilla/en-us/about
           weight: 20
         - name: GitHub
           url: https://github.com/raphazilla
@@ -76,13 +76,13 @@ languages:
           params:
             target: "_blank"
         - name: Tags
-          url: /en-us/tags
+          url: /raphazilla/en-us/tags
           weight: 40
         - name: Archives
-          url: /en-us/archives
+          url: /raphazilla/en-us/archives
           weight: 50  
         - name: Search
-          url: /en-us/search
+          url: /raphazilla/en-us/search
           weight: 60
     params:
       homeInfoParams:
