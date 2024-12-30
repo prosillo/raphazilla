@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Arquitetura De Sistemas on Raphazilla</title>
+    <link>http://localhost:1313/raphazilla/tags/arquitetura-de-sistemas/</link>
+    <description>Recent content in Arquitetura De Sistemas on Raphazilla</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <copyright>Rapha Prosillo - All rights reserved</copyright>
+    <lastBuildDate>Thu, 08 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/raphazilla/tags/arquitetura-de-sistemas/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Implementando o KVM: Virtualização para Ambientes Resilientes</title>
+      <link>http://localhost:1313/raphazilla/blog/kvm-implementacao/</link>
+      <pubDate>Thu, 08 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/raphazilla/blog/kvm-implementacao/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/raphazilla/raphazilla/images/blog/imagem-kvm-qemu.png&#34; alt=&#34;Implementando o KVM&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;&#xA;&lt;p&gt;A virtualização tornou-se uma peça fundamental na infraestrutura de TI, proporcionando flexibilidade, eficiência e resiliência. Neste artigo, exploraremos passo a passo a implementação do &lt;strong&gt;KVM (Kernel-based Virtual Machine)&lt;/strong&gt; como solução de virtualização, destacando requisitos, configurações essenciais e dois exemplos práticos de arquiteturas resilientes.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

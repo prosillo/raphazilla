@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Alta Disponibilidade on Raphazilla</title>
+    <link>http://localhost:1313/raphazilla/tags/alta-disponibilidade/</link>
+    <description>Recent content in Alta Disponibilidade on Raphazilla</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <copyright>Rapha Prosillo - All rights reserved</copyright>
+    <lastBuildDate>Thu, 14 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/raphazilla/tags/alta-disponibilidade/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Proxmox VE: Configurando um Cluster de Alta Disponibilidade</title>
+      <link>http://localhost:1313/raphazilla/blog/proxmox-ha/</link>
+      <pubDate>Thu, 14 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/raphazilla/blog/proxmox-ha/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/raphazilla/raphazilla/images/blog/imagem-proxmox.png&#34; alt=&#34;Proxmox VE: Configurando um Cluster de Alta Disponibilidade&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;O Proxmox VE é uma plataforma de virtualização poderosa que oferece a capacidade de criar clusters para garantir alta disponibilidade (HA) e tolerância a falhas. Neste artigo, exploraremos o processo de configuração passo a passo para criar um cluster Proxmox com alta disponibilidade.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

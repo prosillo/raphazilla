@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="auto">
+
+<head><script src="/raphazilla/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=raphazilla/livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Proxmox VE: Configurando um Cluster de Alta Disponibilidade | Raphazilla</title>
+<meta name="keywords" content="Proxmox VE, Alta Disponibilidade, Cluster">
+<meta name="description" content="
+O Proxmox VE é uma plataforma de virtualização poderosa que oferece a capacidade de criar clusters para garantir alta disponibilidade (HA) e tolerância a falhas. Neste artigo, exploraremos o processo de configuração passo a passo para criar um cluster Proxmox com alta disponibilidade.
+Pré-requisitos
+Antes de começar, certifique-se de ter pelo menos dois nós Proxmox VE configurados e conectados na mesma rede. Certifique-se de que cada nó possua endereços IP estáticos e resolução de DNS.">
+<meta name="author" content="Rapha">
+<link rel="canonical" href="http://localhost:1313/raphazilla/en-us/blog/2024-03-14-proxmox-ha/">
+<link crossorigin="anonymous" href="/raphazilla/assets/css/stylesheet.83f5e7992cc44746141bfc6398c87323730d8439db5d68b0ced30a40d37d99af.css" integrity="sha256-g/XnmSzER0YUG/xjmMhzI3MNhDnbXWiwztMKQNN9ma8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/raphazilla/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/raphazilla/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/raphazilla/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/raphazilla/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/raphazilla/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="pt-br" href="http://localhost:1313/raphazilla/blog/2024-03-14-proxmox-ha/">
+<link rel="alternate" hreflang="en-us" href="http://localhost:1313/raphazilla/en-us/blog/2024-03-14-proxmox-ha/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript><meta property="og:url" content="http://localhost:1313/raphazilla/en-us/blog/2024-03-14-proxmox-ha/">
+  <meta property="og:site_name" content="Raphazilla">
+  <meta property="og:title" content="Proxmox VE: Configurando um Cluster de Alta Disponibilidade">
+  <meta property="og:description" content="
+O Proxmox VE é uma plataforma de virtualização poderosa que oferece a capacidade de criar clusters para garantir alta disponibilidade (HA) e tolerância a falhas. Neste artigo, exploraremos o processo de configuração passo a passo para criar um cluster Proxmox com alta disponibilidade.
+Pré-requisitos Antes de começar, certifique-se de ter pelo menos dois nós Proxmox VE configurados e conectados na mesma rede. Certifique-se de que cada nó possua endereços IP estáticos e resolução de DNS.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2024-03-14T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-03-14T00:00:00+00:00">
+    <meta property="article:tag" content="Proxmox VE">
+    <meta property="article:tag" content="Alta Disponibilidade">
+    <meta property="article:tag" content="Cluster">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Proxmox VE: Configurando um Cluster de Alta Disponibilidade">
+<meta name="twitter:description" content="
+O Proxmox VE é uma plataforma de virtualização poderosa que oferece a capacidade de criar clusters para garantir alta disponibilidade (HA) e tolerância a falhas. Neste artigo, exploraremos o processo de configuração passo a passo para criar um cluster Proxmox com alta disponibilidade.
+Pré-requisitos
+Antes de começar, certifique-se de ter pelo menos dois nós Proxmox VE configurados e conectados na mesma rede. Certifique-se de que cada nó possua endereços IP estáticos e resolução de DNS.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Blog",
+      "item": "http://localhost:1313/raphazilla/en-us/blog/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Proxmox VE: Configurando um Cluster de Alta Disponibilidade",
+      "item": "http://localhost:1313/raphazilla/en-us/blog/2024-03-14-proxmox-ha/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Proxmox VE: Configurando um Cluster de Alta Disponibilidade",
+  "name": "Proxmox VE: Configurando um Cluster de Alta Disponibilidade",
+  "description": "\nO Proxmox VE é uma plataforma de virtualização poderosa que oferece a capacidade de criar clusters para garantir alta disponibilidade (HA) e tolerância a falhas. Neste artigo, exploraremos o processo de configuração passo a passo para criar um cluster Proxmox com alta disponibilidade.\nPré-requisitos Antes de começar, certifique-se de ter pelo menos dois nós Proxmox VE configurados e conectados na mesma rede. Certifique-se de que cada nó possua endereços IP estáticos e resolução de DNS.\n",
+  "keywords": [
+    "Proxmox VE", "Alta Disponibilidade", "Cluster"
+  ],
+  "articleBody": "\nO Proxmox VE é uma plataforma de virtualização poderosa que oferece a capacidade de criar clusters para garantir alta disponibilidade (HA) e tolerância a falhas. Neste artigo, exploraremos o processo de configuração passo a passo para criar um cluster Proxmox com alta disponibilidade.\nPré-requisitos Antes de começar, certifique-se de ter pelo menos dois nós Proxmox VE configurados e conectados na mesma rede. Certifique-se de que cada nó possua endereços IP estáticos e resolução de DNS.\nPasso 1: Instalação do Pacemaker e Corosync A primeira etapa é instalar os pacotes necessários para a configuração do cluster. Utilize o seguinte comando em cada nó:\n1 2 sudo apt-get update sudo apt-get install corosync pacemaker fence-agents Passo 2: Configuração do Corosync Edite o arquivo de configuração do Corosync no diretório /etc/corosync/corosync.conf:\n1 sudo nano /etc/corosync/corosync.conf Adicione as seguintes linhas para configurar o transporte e a interface de rede:\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 totem { version: 2 secauth: off cluster_name: mycluster transport: udpu } nodelist { node { ring0_addr: name: nodeid: 1 } node { ring0_addr: name: nodeid: 2 } } Substitua , , , e pelos valores correspondentes de seus nós.\nPasso 3: Inicialização e Verificação do Corosync Inicie o Corosync nos dois nós:\n1 2 sudo systemctl start corosync sudo systemctl enable corosync Verifique o status do Corosync:\n1 sudo corosync-cfgtool -s Passo 4: Configuração do Pacemaker Edite o arquivo de configuração do Pacemaker no diretório /etc/pve/corosync.conf:\n1 sudo nano /etc/pve/corosync.conf Adicione a seguinte linha para configurar o uso do Corosync:\n1 CMAN_NODES=/etc/corosync/corosync.conf Passo 5: Inicialização do Pacemaker Inicie o serviço do Pacemaker:\n1 2 sudo systemctl start pve-cluster sudo systemctl enable pve-cluster Verifique o status do Pacemaker:\n1 sudo pvecm status Passo 6: Adição de Nós ao Cluster Adicione os nós ao cluster com o seguinte comando (executado em um nó):\n1 sudo pvecm add Conclusão Parabéns! Você configurou com sucesso um cluster de alta disponibilidade no Proxmox VE. Certifique-se de revisar a documentação oficial do Proxmox para obter informações adicionais sobre configurações avançadas e otimizações para ambientes específicos.\nEste é apenas o primeiro passo para criar uma infraestrutura virtualizada robusta e resiliente. Em futuros artigos, exploraremos estratégias de migração, balanceamento de carga e otimizações adicionais para tirar o máximo proveito do seu ambiente Proxmox VE com cluster de alta disponibilidade.\n",
+  "wordCount" : "401",
+  "inLanguage": "en-us",
+  "datePublished": "2024-03-14T00:00:00Z",
+  "dateModified": "2024-03-14T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Rapha"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://localhost:1313/raphazilla/en-us/blog/2024-03-14-proxmox-ha/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Raphazilla",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://localhost:1313/raphazilla/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class=" dark" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/raphazilla/en-us/" accesskey="h" title="Raphazilla (Alt + H)">
+                <img src="http://localhost:1313/raphazilla/images/author.webp" alt="Logo do Blog" aria-label="logo"
+                    height="30">
+            </a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                    <li>
+                        <a href="http://localhost:1313/raphazilla/" title="Português (Brasil)"
+                            aria-label="Português (Brasil)">Pt-Br</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/en-us/raphazilla/blog" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/en-us/raphazilla/about" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/raphazilla" title="GitHub">
+                    <span>GitHub</span>&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/en-us/raphazilla/tags" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/en-us/raphazilla/archives" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/en-us/raphazilla/search" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/raphazilla/en-us/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/raphazilla/en-us/blog/">Blog</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Proxmox VE: Configurando um Cluster de Alta Disponibilidade
+    </h1>
+    <div class="post-meta"><span title='2024-03-14 00:00:00 +0000 UTC'>March 14, 2024</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Rapha&nbsp;|&nbsp;Translations:
+<ul class="i18n_list">
+    <li>
+        <a href="http://localhost:1313/raphazilla/blog/2024-03-14-proxmox-ha/">Pt-Br</a>
+    </li>
+</ul>&nbsp;|&nbsp;<a href="https://github.com/raphazilla/raphazilla/content/blog/2024-03-14-proxmox-ha.md" rel="noopener noreferrer" target="_blank">Edit</a>
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#pr%c3%a9-requisitos" aria-label="Pré-requisitos">Pré-requisitos</a></li>
+                <li>
+                    <a href="#passo-1-instala%c3%a7%c3%a3o-do-pacemaker-e-corosync" aria-label="Passo 1: Instalação do Pacemaker e Corosync">Passo 1: Instalação do Pacemaker e Corosync</a></li>
+                <li>
+                    <a href="#passo-2-configura%c3%a7%c3%a3o-do-corosync" aria-label="Passo 2: Configuração do Corosync">Passo 2: Configuração do Corosync</a></li>
+                <li>
+                    <a href="#passo-3-inicializa%c3%a7%c3%a3o-e-verifica%c3%a7%c3%a3o-do-corosync" aria-label="Passo 3: Inicialização e Verificação do Corosync">Passo 3: Inicialização e Verificação do Corosync</a></li>
+                <li>
+                    <a href="#passo-4-configura%c3%a7%c3%a3o-do-pacemaker" aria-label="Passo 4: Configuração do Pacemaker">Passo 4: Configuração do Pacemaker</a></li>
+                <li>
+                    <a href="#passo-5-inicializa%c3%a7%c3%a3o-do-pacemaker" aria-label="Passo 5: Inicialização do Pacemaker">Passo 5: Inicialização do Pacemaker</a></li>
+                <li>
+                    <a href="#passo-6-adi%c3%a7%c3%a3o-de-n%c3%b3s-ao-cluster" aria-label="Passo 6: Adição de Nós ao Cluster">Passo 6: Adição de Nós ao Cluster</a></li>
+                <li>
+                    <a href="#conclus%c3%a3o" aria-label="Conclusão">Conclusão</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p><img alt="Proxmox VE: Configurando um Cluster de Alta Disponibilidade" loading="lazy" src="/raphazilla/images/blog/imagem-proxmox.png"></p>
+<p>O Proxmox VE é uma plataforma de virtualização poderosa que oferece a capacidade de criar clusters para garantir alta disponibilidade (HA) e tolerância a falhas. Neste artigo, exploraremos o processo de configuração passo a passo para criar um cluster Proxmox com alta disponibilidade.</p>
+<h2 id="pré-requisitos">Pré-requisitos<a hidden class="anchor" aria-hidden="true" href="#pré-requisitos">#</a></h2>
+<p>Antes de começar, certifique-se de ter pelo menos dois nós Proxmox VE configurados e conectados na mesma rede. Certifique-se de que cada nó possua endereços IP estáticos e resolução de DNS.</p>
+<h2 id="passo-1-instalação-do-pacemaker-e-corosync">Passo 1: Instalação do Pacemaker e Corosync<a hidden class="anchor" aria-hidden="true" href="#passo-1-instalação-do-pacemaker-e-corosync">#</a></h2>
+<p>A primeira etapa é instalar os pacotes necessários para a configuração do cluster. Utilize o seguinte comando em cada nó:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-0-1"><a class="lnlinks" href="#hl-0-1">1</a>
+</span><span class="lnt" id="hl-0-2"><a class="lnlinks" href="#hl-0-2">2</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt-get update
+</span></span><span class="line"><span class="cl">sudo apt-get install corosync pacemaker fence-agents
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="passo-2-configuração-do-corosync">Passo 2: Configuração do Corosync<a hidden class="anchor" aria-hidden="true" href="#passo-2-configuração-do-corosync">#</a></h2>
+<p>Edite o arquivo de configuração do Corosync no diretório <code>/etc/corosync/corosync.conf</code>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-1-1"><a class="lnlinks" href="#hl-1-1">1</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo nano /etc/corosync/corosync.conf
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Adicione as seguintes linhas para configurar o transporte e a interface de rede:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-2-1"><a class="lnlinks" href="#hl-2-1"> 1</a>
+</span><span class="lnt" id="hl-2-2"><a class="lnlinks" href="#hl-2-2"> 2</a>
+</span><span class="lnt" id="hl-2-3"><a class="lnlinks" href="#hl-2-3"> 3</a>
+</span><span class="lnt" id="hl-2-4"><a class="lnlinks" href="#hl-2-4"> 4</a>
+</span><span class="lnt" id="hl-2-5"><a class="lnlinks" href="#hl-2-5"> 5</a>
+</span><span class="lnt" id="hl-2-6"><a class="lnlinks" href="#hl-2-6"> 6</a>
+</span><span class="lnt" id="hl-2-7"><a class="lnlinks" href="#hl-2-7"> 7</a>
+</span><span class="lnt" id="hl-2-8"><a class="lnlinks" href="#hl-2-8"> 8</a>
+</span><span class="lnt" id="hl-2-9"><a class="lnlinks" href="#hl-2-9"> 9</a>
+</span><span class="lnt" id="hl-2-10"><a class="lnlinks" href="#hl-2-10">10</a>
+</span><span class="lnt" id="hl-2-11"><a class="lnlinks" href="#hl-2-11">11</a>
+</span><span class="lnt" id="hl-2-12"><a class="lnlinks" href="#hl-2-12">12</a>
+</span><span class="lnt" id="hl-2-13"><a class="lnlinks" href="#hl-2-13">13</a>
+</span><span class="lnt" id="hl-2-14"><a class="lnlinks" href="#hl-2-14">14</a>
+</span><span class="lnt" id="hl-2-15"><a class="lnlinks" href="#hl-2-15">15</a>
+</span><span class="lnt" id="hl-2-16"><a class="lnlinks" href="#hl-2-16">16</a>
+</span><span class="lnt" id="hl-2-17"><a class="lnlinks" href="#hl-2-17">17</a>
+</span><span class="lnt" id="hl-2-18"><a class="lnlinks" href="#hl-2-18">18</a>
+</span><span class="lnt" id="hl-2-19"><a class="lnlinks" href="#hl-2-19">19</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">totem {
+</span></span><span class="line"><span class="cl">  version: 2
+</span></span><span class="line"><span class="cl">  secauth: off
+</span></span><span class="line"><span class="cl">  cluster_name: mycluster
+</span></span><span class="line"><span class="cl">  transport: udpu
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">nodelist {
+</span></span><span class="line"><span class="cl">  node {
+</span></span><span class="line"><span class="cl">    ring0_addr: &lt;IP_Node_1&gt;
+</span></span><span class="line"><span class="cl">    name: &lt;Node_1_Hostname&gt;
+</span></span><span class="line"><span class="cl">    nodeid: 1
+</span></span><span class="line"><span class="cl">  }
+</span></span><span class="line"><span class="cl">  node {
+</span></span><span class="line"><span class="cl">    ring0_addr: &lt;IP_Node_2&gt;
+</span></span><span class="line"><span class="cl">    name: &lt;Node_2_Hostname&gt;
+</span></span><span class="line"><span class="cl">    nodeid: 2
+</span></span><span class="line"><span class="cl">  }
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Substitua <code>&lt;IP_Node_1&gt;</code>, <code>&lt;IP_Node_2&gt;</code>, <code>&lt;Node_1_Hostname&gt;</code>, e <code>&lt;Node_2_Hostname&gt;</code> pelos valores correspondentes de seus nós.</p>
+<h2 id="passo-3-inicialização-e-verificação-do-corosync">Passo 3: Inicialização e Verificação do Corosync<a hidden class="anchor" aria-hidden="true" href="#passo-3-inicialização-e-verificação-do-corosync">#</a></h2>
+<p>Inicie o Corosync nos dois nós:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-3-1"><a class="lnlinks" href="#hl-3-1">1</a>
+</span><span class="lnt" id="hl-3-2"><a class="lnlinks" href="#hl-3-2">2</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl start corosync
+</span></span><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> corosync
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Verifique o status do Corosync:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-4-1"><a class="lnlinks" href="#hl-4-1">1</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo corosync-cfgtool -s
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="passo-4-configuração-do-pacemaker">Passo 4: Configuração do Pacemaker<a hidden class="anchor" aria-hidden="true" href="#passo-4-configuração-do-pacemaker">#</a></h2>
+<p>Edite o arquivo de configuração do Pacemaker no diretório <code>/etc/pve/corosync.conf</code>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-5-1"><a class="lnlinks" href="#hl-5-1">1</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo nano /etc/pve/corosync.conf
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Adicione a seguinte linha para configurar o uso do Corosync:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-6-1"><a class="lnlinks" href="#hl-6-1">1</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">CMAN_NODES=/etc/corosync/corosync.conf
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="passo-5-inicialização-do-pacemaker">Passo 5: Inicialização do Pacemaker<a hidden class="anchor" aria-hidden="true" href="#passo-5-inicialização-do-pacemaker">#</a></h2>
+<p>Inicie o serviço do Pacemaker:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-7-1"><a class="lnlinks" href="#hl-7-1">1</a>
+</span><span class="lnt" id="hl-7-2"><a class="lnlinks" href="#hl-7-2">2</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl start pve-cluster
+</span></span><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> pve-cluster
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Verifique o status do Pacemaker:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-8-1"><a class="lnlinks" href="#hl-8-1">1</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pvecm status
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="passo-6-adição-de-nós-ao-cluster">Passo 6: Adição de Nós ao Cluster<a hidden class="anchor" aria-hidden="true" href="#passo-6-adição-de-nós-ao-cluster">#</a></h2>
+<p>Adicione os nós ao cluster com o seguinte comando (executado em um nó):</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt" id="hl-9-1"><a class="lnlinks" href="#hl-9-1">1</a>
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pvecm add &lt;Node_2_Hostname&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="conclusão">Conclusão<a hidden class="anchor" aria-hidden="true" href="#conclusão">#</a></h2>
+<p>Parabéns! Você configurou com sucesso um cluster de alta disponibilidade no Proxmox VE. Certifique-se de revisar a documentação oficial do Proxmox para obter informações adicionais sobre configurações avançadas e otimizações para ambientes específicos.</p>
+<p>Este é apenas o primeiro passo para criar uma infraestrutura virtualizada robusta e resiliente. Em futuros artigos, exploraremos estratégias de migração, balanceamento de carga e otimizações adicionais para tirar o máximo proveito do seu ambiente Proxmox VE com cluster de alta disponibilidade.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/raphazilla/en-us/tags/proxmox-ve/">Proxmox VE</a></li>
+      <li><a href="http://localhost:1313/raphazilla/en-us/tags/alta-disponibilidade/">Alta Disponibilidade</a></li>
+      <li><a href="http://localhost:1313/raphazilla/en-us/tags/cluster/">Cluster</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="http://localhost:1313/raphazilla/en-us/blog/2024-03-20-proxmox-sec/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Segurança Avançada no Proxmox VE: Implementação de Melhores Práticas e MFA</span>
+  </a>
+  <a class="next" href="http://localhost:1313/raphazilla/en-us/blog/2024-03-05-proxmox-avancado/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Explorando Funcionalidades Avançadas do Proxmox VE</span>
+  </a>
+</nav>
+
+
+<ul class="share-buttons">
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Proxmox VE: Configurando um Cluster de Alta Disponibilidade on x"
+            href="https://x.com/intent/tweet/?text=Proxmox%20VE%3a%20Configurando%20um%20Cluster%20de%20Alta%20Disponibilidade&amp;url=http%3a%2f%2flocalhost%3a1313%2fraphazilla%2fen-us%2fblog%2f2024-03-14-proxmox-ha%2f&amp;hashtags=ProxmoxVE%2cAltaDisponibilidade%2cCluster">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M512 62.554 L 512 449.446 C 512 483.97 483.97 512 449.446 512 L 62.554 512 C 28.03 512 0 483.97 0 449.446 L 0 62.554 C 0 28.03 28.029 0 62.554 0 L 449.446 0 C 483.971 0 512 28.03 512 62.554 Z M 269.951 190.75 L 182.567 75.216 L 56 75.216 L 207.216 272.95 L 63.9 436.783 L 125.266 436.783 L 235.9 310.383 L 332.567 436.783 L 456 436.783 L 298.367 228.367 L 432.367 75.216 L 371.033 75.216 Z M 127.633 110 L 164.101 110 L 383.481 400.065 L 349.5 400.065 Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Proxmox VE: Configurando um Cluster de Alta Disponibilidade on linkedin"
+            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2flocalhost%3a1313%2fraphazilla%2fen-us%2fblog%2f2024-03-14-proxmox-ha%2f&amp;title=Proxmox%20VE%3a%20Configurando%20um%20Cluster%20de%20Alta%20Disponibilidade&amp;summary=Proxmox%20VE%3a%20Configurando%20um%20Cluster%20de%20Alta%20Disponibilidade&amp;source=http%3a%2f%2flocalhost%3a1313%2fraphazilla%2fen-us%2fblog%2f2024-03-14-proxmox-ha%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Proxmox VE: Configurando um Cluster de Alta Disponibilidade on reddit"
+            href="https://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fraphazilla%2fen-us%2fblog%2f2024-03-14-proxmox-ha%2f&title=Proxmox%20VE%3a%20Configurando%20um%20Cluster%20de%20Alta%20Disponibilidade">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Proxmox VE: Configurando um Cluster de Alta Disponibilidade on facebook"
+            href="https://facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fraphazilla%2fen-us%2fblog%2f2024-03-14-proxmox-ha%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Proxmox VE: Configurando um Cluster de Alta Disponibilidade on whatsapp"
+            href="https://api.whatsapp.com/send?text=Proxmox%20VE%3a%20Configurando%20um%20Cluster%20de%20Alta%20Disponibilidade%20-%20http%3a%2f%2flocalhost%3a1313%2fraphazilla%2fen-us%2fblog%2f2024-03-14-proxmox-ha%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Proxmox VE: Configurando um Cluster de Alta Disponibilidade on telegram"
+            href="https://telegram.me/share/url?text=Proxmox%20VE%3a%20Configurando%20um%20Cluster%20de%20Alta%20Disponibilidade&amp;url=http%3a%2f%2flocalhost%3a1313%2fraphazilla%2fen-us%2fblog%2f2024-03-14-proxmox-ha%2f">
+            <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Proxmox VE: Configurando um Cluster de Alta Disponibilidade on ycombinator"
+            href="https://news.ycombinator.com/submitlink?t=Proxmox%20VE%3a%20Configurando%20um%20Cluster%20de%20Alta%20Disponibilidade&u=http%3a%2f%2flocalhost%3a1313%2fraphazilla%2fen-us%2fblog%2f2024-03-14-proxmox-ha%2f">
+            <svg version="1.1" xml:space="preserve" width="30px" height="30px" viewBox="0 0 512 512" fill="currentColor"
+                xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
+                <path
+                    d="M449.446 0C483.971 0 512 28.03 512 62.554L512 449.446C512 483.97 483.97 512 449.446 512L62.554 512C28.03 512 0 483.97 0 449.446L0 62.554C0 28.03 28.029 0 62.554 0L449.446 0ZM183.8767 87.9921H121.8427L230.6673 292.4508V424.0079H281.3328V292.4508L390.1575 87.9921H328.1233L256 238.2489z" />
+            </svg>
+        </a>
+    </li>
+</ul>
+
+  </footer><div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "raphazilla" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2024 <a href="http://localhost:1313/raphazilla/en-us/">Raphazilla</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

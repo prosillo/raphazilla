@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MFA on Raphazilla</title>
+    <link>http://localhost:1313/raphazilla/tags/mfa/</link>
+    <description>Recent content in MFA on Raphazilla</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <copyright>Rapha Prosillo - All rights reserved</copyright>
+    <lastBuildDate>Wed, 20 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/raphazilla/tags/mfa/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Segurança Avançada no Proxmox VE: Implementação de Melhores Práticas e MFA</title>
+      <link>http://localhost:1313/raphazilla/blog/proxmox-sec/</link>
+      <pubDate>Wed, 20 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/raphazilla/blog/proxmox-sec/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/raphazilla/raphazilla/images/blog/imagem-proxmox.png&#34; alt=&#34;Segurança Avançada no Proxmox VE: Implementação de Melhores Práticas e MFA&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;A segurança é uma preocupação crítica em qualquer ambiente de virtualização. No Proxmox VE, implementar práticas de segurança robustas é essencial para proteger seus dados e sistemas contra ameaças. Neste artigo, vamos explorar a fundo algumas das melhores práticas de segurança e como implementá-las no Proxmox VE, com ênfase na autenticação de dois fatores (MFA).&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
