@@ -14,6 +14,7 @@ comments: true
 author: "Rapha"
 avatar: "/images/author.jpg"
 TocOpen: true
+layout: "post"
 ---
 
 ## Introdução
