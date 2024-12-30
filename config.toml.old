@@ -1,0 +1,98 @@
+baseURL = "http://localhost" 
+title = "Raphazilla"
+theme = "dream"
+summaryLength = 25
+enableEmoji = true
+disqusShortname = "raphazilla"
+googleAnalytics = "G-6SVRZ2T5RW"
+languageCode = "pt-BR"
+defaultContentLanguage = "pt"
+enableRobotsTXT = true
+publishDir = "public"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[pagination]
+  pagerSize = 6
+
+[languages]
+  [languages.pt]
+    languageName = "Português (Brasil)"
+    weight = 1
+    contentDir = "content/pt-br"
+    title = "Raphazilla"
+    params = { description = "Explorando tecnologia, automação e insights DevOps." }
+
+  [languages.en-us]
+    languageName = "English"
+    weight = 2
+    contentDir = "content/en-us"
+    title = "Raphazilla"
+    params = { description = "Exploring technology, automation, and DevOps insights." }
+
+[params]
+  logo = "images/blog-logo.jpg"
+  description = "Another Techblog.."
+  avatar = "images/author.png" # Atualize o caminho conforme necessário
+  headerTitle = "Raphazilla"
+  motto = "Lifelong Learner, Cloud and DevOps Enthusiast."
+  rss = true
+  showTableOfContents = true
+  showSummaryCoverInPost = true
+  imageZoomableInPost = true
+  showPrevNextPost = true
+  lightTheme = "emerald"
+  darkTheme = "forest"
+  reorderNavItems = ["blog", "about", "search", "tags", "rss", "github"]
+  zenMode = false
+  customHighlight = true
+
+  [params.project]
+    startYear = 2022
+    presentYear = 2024
+    [params.project.github]
+      repo = "raphazilla/raphazilla"
+    [params.project.themeColor]
+      light = "#ffffff"
+      dark = "#101010"
+
+[params.author]
+  name = "Rapha"
+  thumbnail = "images/author.png"
+  description = "Lifelong Learner, Cloud and DevOps Enthusiast."
+
+[params.index]
+  picture = "images/hero-banner.jpg"
+  title = "Bem-vindo ao Raphazilla"
+  subtitle = "Onde tecnologia encontra automação e criatividade"
+  mdtext = '''
+    👋 Olá pessoal!
+    Sou o Rapha, um apaixonado por tecnologia, DevOps e inovação. Este espaço é onde compartilho insights e exploro ideias com a comunidade tech. 🚀
+  '''
+  alertbar = true
+
+[params.social]
+  github = "raphazilla"
+  linkedin = "raphaelprosillo"
+  twitter = "ollisorp"
+
+[params.navItems]
+    blog = { href = "/blog", icon = "newspaper-outline", title = "Blog" }
+    about = { href = "/about", icon = "person-outline", title = "Sobre" }
+    github = { href = "https://github.com/raphazilla", target = "_blank", icon = "logo-github", title = "GitHub" }
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+    [markup.goldmark.parser]
+      [markup.goldmark.parser.attribute]
+        block = true
+        title = true
+
+[server]
+  watch = true
+  disableFastRender = true

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Cluster on Raphazilla</title>
+    <link>http://localhost:1313/tags/cluster/</link>
+    <description>Recent content in Cluster on Raphazilla</description>
+    <generator>Hugo -- 0.140.1</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Thu, 14 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/cluster/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Proxmox VE: Configurando um Cluster de Alta Disponibilidade</title>
+      <link>http://localhost:1313/blog/2024-03-14-proxmox-ha/</link>
+      <pubDate>Thu, 14 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2024-03-14-proxmox-ha/</guid>
+      <description>&lt;p&gt;&lt;img alt=&#34;Proxmox VE: Configurando um Cluster de Alta Disponibilidade&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/raphazilla/images/blog/imagem-proxmox.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;O Proxmox VE é uma plataforma de virtualização poderosa que oferece a capacidade de criar clusters para garantir alta disponibilidade (HA) e tolerância a falhas. Neste artigo, exploraremos o processo de configuração passo a passo para criar um cluster Proxmox com alta disponibilidade.&lt;/p&gt;
+&lt;h2 id=&#34;pré-requisitos&#34;&gt;Pré-requisitos&lt;/h2&gt;
+&lt;p&gt;Antes de começar, certifique-se de ter pelo menos dois nós Proxmox VE configurados e conectados na mesma rede. Certifique-se de que cada nó possua endereços IP estáticos e resolução de DNS.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

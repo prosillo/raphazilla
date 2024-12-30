@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Automação on Raphazilla</title>
+    <link>http://localhost:1313/tags/automa%C3%A7%C3%A3o/</link>
+    <description>Recent content in Automação on Raphazilla</description>
+    <generator>Hugo -- 0.140.1</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Mon, 05 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/automa%C3%A7%C3%A3o/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Desvendando o Cloud-init e Virt-customize: Simplificando a Configuração de Máquinas Virtuais</title>
+      <link>http://localhost:1313/blog/2024-02-05-cloud-init/</link>
+      <pubDate>Mon, 05 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2024-02-05-cloud-init/</guid>
+      <description>&lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;
+&lt;p&gt;Configurar máquinas virtuais em ambientes de nuvem pode ser uma tarefa desafiadora, mas ferramentas como &lt;strong&gt;Cloud-init&lt;/strong&gt; e &lt;strong&gt;Virt-customize&lt;/strong&gt; tornam esse processo mais eficiente e flexível. Neste artigo, vamos explorar o Cloud-init e apresentar o uso do Virt-customize para personalizar imagens de máquinas virtuais.&lt;/p&gt;
+&lt;h2 id=&#34;o-que-é-o-cloud-init&#34;&gt;O que é o Cloud-init?&lt;/h2&gt;
+&lt;p&gt;O &lt;strong&gt;Cloud-init&lt;/strong&gt; é uma ferramenta open-source amplamente utilizada para a configuração automática de instâncias de máquinas virtuais em ambientes de nuvem. Ele oferece uma abordagem consistente para a personalização de máquinas virtuais, independentemente do provedor de nuvem escolhido.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

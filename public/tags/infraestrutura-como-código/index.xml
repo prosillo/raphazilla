@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Infraestrutura Como Código on Raphazilla</title>
+    <link>http://localhost:1313/tags/infraestrutura-como-c%C3%B3digo/</link>
+    <description>Recent content in Infraestrutura Como Código on Raphazilla</description>
+    <generator>Hugo -- 0.140.1</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Wed, 07 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/infraestrutura-como-c%C3%B3digo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Aprofundando no KVM: Desvendando Recursos Avançados de Virtualização</title>
+      <link>http://localhost:1313/blog/2024-02-07-kvm-avancado/</link>
+      <pubDate>Wed, 07 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2024-02-07-kvm-avancado/</guid>
+      <description>&lt;p&gt;&lt;img alt=&#34;KVM Avançado&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/raphazilla/images/blog/imagem-kvm-qemu.png&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;
+&lt;p&gt;Em nosso artigo anterior, exploramos o fascinante mundo da virtualização com &lt;strong&gt;KVM (Kernel-based Virtual Machine)&lt;/strong&gt; e &lt;strong&gt;QEMU (Quick Emulator)&lt;/strong&gt;. Agora, vamos aprofundar nosso conhecimento no KVM, explorando recursos avançados que elevam a virtualização a um novo patamar. Este artigo é a sequência natural, então, se você ainda não leu o artigo anterior, confira &lt;a href=&#34;http://localhost:1313/raphazilla/blog/kvm-qemu/&#34;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;snapshot-e-clonagem-de-máquinas-virtuais&#34;&gt;Snapshot e Clonagem de Máquinas Virtuais&lt;/h2&gt;
+&lt;p&gt;Uma das características poderosas do KVM é a capacidade de criar snapshots de máquinas virtuais, permitindo a captura do estado atual da VM. Esses snapshots podem ser usados para backup, replicação ou para retornar a máquina virtual a um estado anterior. Vamos ver como criar um snapshot:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Explorando o Mundo do KVM e QEMU: Uma Jornada Virtual</title>
+      <link>http://localhost:1313/blog/2024-02-06-kvm-qemu/</link>
+      <pubDate>Tue, 06 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2024-02-06-kvm-qemu/</guid>
+      <description>&lt;p&gt;&lt;img alt=&#34;KVM e QEMU&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/blog/imagem-kvm-qemu.png&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;
+&lt;p&gt;Bem-vindo a uma jornada pelo intrigante mundo da virtualização com &lt;strong&gt;KVM (Kernel-based Virtual Machine)&lt;/strong&gt; e &lt;strong&gt;QEMU (Quick Emulator)&lt;/strong&gt;. Nestes tempos onde a criação de ambientes virtuais é crucial, entender como essas ferramentas funcionam e se integram pode ser um diferencial significativo. Vamos explorar não apenas os conceitos básicos, mas também exemplos práticos de utilização e aplicações no mundo real.&lt;/p&gt;
+&lt;h2 id=&#34;kvm-a-base-da-virtualização&#34;&gt;KVM: A Base da Virtualização&lt;/h2&gt;
+&lt;p&gt;O KVM, sendo parte integrante do kernel Linux, oferece uma solução robusta para a virtualização de hardware. Vamos dar uma olhada em um exemplo prático. Suponha que você deseje criar uma máquina virtual Linux no seu sistema host. Você pode fazer isso utilizando o seguinte comando:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Desvendando o Cloud-init e Virt-customize: Simplificando a Configuração de Máquinas Virtuais</title>
+      <link>http://localhost:1313/blog/2024-02-05-cloud-init/</link>
+      <pubDate>Mon, 05 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2024-02-05-cloud-init/</guid>
+      <description>&lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;
+&lt;p&gt;Configurar máquinas virtuais em ambientes de nuvem pode ser uma tarefa desafiadora, mas ferramentas como &lt;strong&gt;Cloud-init&lt;/strong&gt; e &lt;strong&gt;Virt-customize&lt;/strong&gt; tornam esse processo mais eficiente e flexível. Neste artigo, vamos explorar o Cloud-init e apresentar o uso do Virt-customize para personalizar imagens de máquinas virtuais.&lt;/p&gt;
+&lt;h2 id=&#34;o-que-é-o-cloud-init&#34;&gt;O que é o Cloud-init?&lt;/h2&gt;
+&lt;p&gt;O &lt;strong&gt;Cloud-init&lt;/strong&gt; é uma ferramenta open-source amplamente utilizada para a configuração automática de instâncias de máquinas virtuais em ambientes de nuvem. Ele oferece uma abordagem consistente para a personalização de máquinas virtuais, independentemente do provedor de nuvem escolhido.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

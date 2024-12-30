@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on Raphazilla</title>
+    <link>http://localhost:1313/en-us/tags/</link>
+    <description>Recent content in Tags on Raphazilla</description>
+    <generator>Hugo -- 0.140.1</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 20 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/en-us/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MFA</title>
+      <link>http://localhost:1313/en-us/tags/mfa/</link>
+      <pubDate>Wed, 20 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/en-us/tags/mfa/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Proxmox VE</title>
+      <link>http://localhost:1313/en-us/tags/proxmox-ve/</link>
+      <pubDate>Wed, 20 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/en-us/tags/proxmox-ve/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Segurança</title>
+      <link>http://localhost:1313/en-us/tags/seguran%C3%A7a/</link>
+      <pubDate>Wed, 20 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/en-us/tags/seguran%C3%A7a/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Alta Disponibilidade</title>
+      <link>http://localhost:1313/en-us/tags/alta-disponibilidade/</link>
+      <pubDate>Thu, 14 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/en-us/tags/alta-disponibilidade/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cluster</title>
+      <link>http://localhost:1313/en-us/tags/cluster/</link>
+      <pubDate>Thu, 14 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/en-us/tags/cluster/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ESXi</title>
+      <link>http://localhost:1313/en-us/tags/esxi/</link>
+      <pubDate>Tue, 05 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/en-us/tags/esxi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Virtualização De Servidores</title>
+      <link>http://localhost:1313/en-us/tags/virtualiza%C3%A7%C3%A3o-de-servidores/</link>
+      <pubDate>Tue, 05 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/en-us/tags/virtualiza%C3%A7%C3%A3o-de-servidores/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>VMware</title>
+      <link>http://localhost:1313/en-us/tags/vmware/</link>
+      <pubDate>Tue, 05 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/en-us/tags/vmware/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Arquitetura De Sistemas</title>
+      <link>http://localhost:1313/en-us/tags/arquitetura-de-sistemas/</link>
+      <pubDate>Thu, 08 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/en-us/tags/arquitetura-de-sistemas/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>KVM</title>
+      <link>http://localhost:1313/en-us/tags/kvm/</link>
+      <pubDate>Thu, 08 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/en-us/tags/kvm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Resiliência</title>
+      <link>http://localhost:1313/en-us/tags/resili%C3%AAncia/</link>
+      <pubDate>Thu, 08 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/en-us/tags/resili%C3%AAncia/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cloud-Init</title>
+      <link>http://localhost:1313/en-us/tags/cloud-init/</link>
+      <pubDate>Wed, 07 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/en-us/tags/cloud-init/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Infraestrutura Como Código</title>
+      <link>http://localhost:1313/en-us/tags/infraestrutura-como-c%C3%B3digo/</link>
+      <pubDate>Wed, 07 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/en-us/tags/infraestrutura-como-c%C3%B3digo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>QEMU</title>
+      <link>http://localhost:1313/en-us/tags/qemu/</link>
+      <pubDate>Wed, 07 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/en-us/tags/qemu/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
