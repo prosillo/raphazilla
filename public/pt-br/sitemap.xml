@@ -2,384 +2,384 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>http://localhost:1313/raphazilla/about/</loc>
     <lastmod>2024-12-29T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="http://localhost:1313/en-us/about/"
+                href="http://localhost:1313/raphazilla/en-us/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://localhost:1313/about/"
+                href="http://localhost:1313/raphazilla/about/"
                 />
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>http://localhost:1313/raphazilla/</loc>
     <lastmod>2024-12-29T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="http://localhost:1313/en-us/"
+                href="http://localhost:1313/raphazilla/en-us/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://localhost:1313/"
+                href="http://localhost:1313/raphazilla/"
                 />
   </url><url>
-    <loc>http://localhost:1313/about/about/</loc>
+    <loc>http://localhost:1313/raphazilla/about/about/</loc>
     <lastmod>2024-12-29T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="http://localhost:1313/en-us/about/about/"
+                href="http://localhost:1313/raphazilla/en-us/about/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://localhost:1313/about/about/"
+                href="http://localhost:1313/raphazilla/about/about/"
                 />
   </url><url>
-    <loc>http://localhost:1313/tags/mfa/</loc>
+    <loc>http://localhost:1313/raphazilla/tags/mfa/</loc>
     <lastmod>2024-03-20T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="http://localhost:1313/en-us/tags/mfa/"
+                href="http://localhost:1313/raphazilla/en-us/tags/mfa/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://localhost:1313/tags/mfa/"
+                href="http://localhost:1313/raphazilla/tags/mfa/"
                 />
   </url><url>
-    <loc>http://localhost:1313/blog/</loc>
+    <loc>http://localhost:1313/raphazilla/blog/</loc>
     <lastmod>2024-03-20T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="http://localhost:1313/en-us/blog/"
+                href="http://localhost:1313/raphazilla/en-us/blog/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://localhost:1313/blog/"
+                href="http://localhost:1313/raphazilla/blog/"
                 />
   </url><url>
-    <loc>http://localhost:1313/tags/proxmox-ve/</loc>
+    <loc>http://localhost:1313/raphazilla/tags/proxmox-ve/</loc>
     <lastmod>2024-03-20T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="http://localhost:1313/en-us/tags/proxmox-ve/"
+                href="http://localhost:1313/raphazilla/en-us/tags/proxmox-ve/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://localhost:1313/tags/proxmox-ve/"
+                href="http://localhost:1313/raphazilla/tags/proxmox-ve/"
                 />
   </url><url>
-    <loc>http://localhost:1313/tags/seguran%C3%A7a/</loc>
+    <loc>http://localhost:1313/raphazilla/tags/seguran%C3%A7a/</loc>
     <lastmod>2024-03-20T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="http://localhost:1313/en-us/tags/seguran%C3%A7a/"
+                href="http://localhost:1313/raphazilla/en-us/tags/seguran%C3%A7a/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://localhost:1313/tags/seguran%C3%A7a/"
+                href="http://localhost:1313/raphazilla/tags/seguran%C3%A7a/"
                 />
   </url><url>
-    <loc>http://localhost:1313/blog/2024-03-20-proxmox-sec/</loc>
+    <loc>http://localhost:1313/raphazilla/blog/2024-03-20-proxmox-sec/</loc>
     <lastmod>2024-03-20T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="http://localhost:1313/en-us/blog/2024-03-20-proxmox-sec/"
+                href="http://localhost:1313/raphazilla/en-us/blog/2024-03-20-proxmox-sec/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://localhost:1313/blog/2024-03-20-proxmox-sec/"
+                href="http://localhost:1313/raphazilla/blog/2024-03-20-proxmox-sec/"
                 />
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>http://localhost:1313/raphazilla/tags/</loc>
     <lastmod>2024-03-20T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="http://localhost:1313/en-us/tags/"
+                href="http://localhost:1313/raphazilla/en-us/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://localhost:1313/tags/"
+                href="http://localhost:1313/raphazilla/tags/"
                 />
   </url><url>
-    <loc>http://localhost:1313/tags/alta-disponibilidade/</loc>
+    <loc>http://localhost:1313/raphazilla/tags/alta-disponibilidade/</loc>
     <lastmod>2024-03-14T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="http://localhost:1313/en-us/tags/alta-disponibilidade/"
+                href="http://localhost:1313/raphazilla/en-us/tags/alta-disponibilidade/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://localhost:1313/tags/alta-disponibilidade/"
+                href="http://localhost:1313/raphazilla/tags/alta-disponibilidade/"
                 />
   </url><url>
-    <loc>http://localhost:1313/tags/cluster/</loc>
+    <loc>http://localhost:1313/raphazilla/tags/cluster/</loc>
     <lastmod>2024-03-14T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="http://localhost:1313/en-us/tags/cluster/"
+                href="http://localhost:1313/raphazilla/en-us/tags/cluster/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://localhost:1313/tags/cluster/"
+                href="http://localhost:1313/raphazilla/tags/cluster/"
                 />
   </url><url>
-    <loc>http://localhost:1313/blog/2024-03-14-proxmox-ha/</loc>
+    <loc>http://localhost:1313/raphazilla/blog/2024-03-14-proxmox-ha/</loc>
     <lastmod>2024-03-14T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="http://localhost:1313/en-us/blog/2024-03-14-proxmox-ha/"
+                href="http://localhost:1313/raphazilla/en-us/blog/2024-03-14-proxmox-ha/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://localhost:1313/blog/2024-03-14-proxmox-ha/"
+                href="http://localhost:1313/raphazilla/blog/2024-03-14-proxmox-ha/"
                 />
   </url><url>
-    <loc>http://localhost:1313/tags/esxi/</loc>
+    <loc>http://localhost:1313/raphazilla/tags/esxi/</loc>
     <lastmod>2024-03-05T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="http://localhost:1313/en-us/tags/esxi/"
+                href="http://localhost:1313/raphazilla/en-us/tags/esxi/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://localhost:1313/tags/esxi/"
+                href="http://localhost:1313/raphazilla/tags/esxi/"
                 />
   </url><url>
-    <loc>http://localhost:1313/blog/2024-03-05-proxmox-avancado/</loc>
+    <loc>http://localhost:1313/raphazilla/blog/2024-03-05-proxmox-avancado/</loc>
     <lastmod>2024-03-05T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="http://localhost:1313/en-us/blog/2024-03-05-proxmox-avancado/"
+                href="http://localhost:1313/raphazilla/en-us/blog/2024-03-05-proxmox-avancado/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://localhost:1313/blog/2024-03-05-proxmox-avancado/"
+                href="http://localhost:1313/raphazilla/blog/2024-03-05-proxmox-avancado/"
                 />
   </url><url>
-    <loc>http://localhost:1313/tags/virtualiza%C3%A7%C3%A3o-de-servidores/</loc>
+    <loc>http://localhost:1313/raphazilla/tags/virtualiza%C3%A7%C3%A3o-de-servidores/</loc>
     <lastmod>2024-03-05T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="http://localhost:1313/en-us/tags/virtualiza%C3%A7%C3%A3o-de-servidores/"
+                href="http://localhost:1313/raphazilla/en-us/tags/virtualiza%C3%A7%C3%A3o-de-servidores/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://localhost:1313/tags/virtualiza%C3%A7%C3%A3o-de-servidores/"
+                href="http://localhost:1313/raphazilla/tags/virtualiza%C3%A7%C3%A3o-de-servidores/"
                 />
   </url><url>
-    <loc>http://localhost:1313/tags/vmware/</loc>
+    <loc>http://localhost:1313/raphazilla/tags/vmware/</loc>
     <lastmod>2024-03-05T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="http://localhost:1313/en-us/tags/vmware/"
+                href="http://localhost:1313/raphazilla/en-us/tags/vmware/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://localhost:1313/tags/vmware/"
+                href="http://localhost:1313/raphazilla/tags/vmware/"
                 />
   </url><url>
-    <loc>http://localhost:1313/blog/2024-02-28-proxmox-introducao/</loc>
+    <loc>http://localhost:1313/raphazilla/blog/2024-02-28-proxmox-introducao/</loc>
     <lastmod>2024-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="http://localhost:1313/en-us/blog/2024-02-28-proxmox-introducao/"
+                href="http://localhost:1313/raphazilla/en-us/blog/2024-02-28-proxmox-introducao/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://localhost:1313/blog/2024-02-28-proxmox-introducao/"
+                href="http://localhost:1313/raphazilla/blog/2024-02-28-proxmox-introducao/"
                 />
   </url><url>
-    <loc>http://localhost:1313/tags/arquitetura-de-sistemas/</loc>
+    <loc>http://localhost:1313/raphazilla/tags/arquitetura-de-sistemas/</loc>
     <lastmod>2024-02-08T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="http://localhost:1313/en-us/tags/arquitetura-de-sistemas/"
+                href="http://localhost:1313/raphazilla/en-us/tags/arquitetura-de-sistemas/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://localhost:1313/tags/arquitetura-de-sistemas/"
+                href="http://localhost:1313/raphazilla/tags/arquitetura-de-sistemas/"
                 />
   </url><url>
-    <loc>http://localhost:1313/blog/2024-02-08-kvm-implementacao/</loc>
+    <loc>http://localhost:1313/raphazilla/blog/2024-02-08-kvm-implementacao/</loc>
     <lastmod>2024-02-08T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="http://localhost:1313/en-us/blog/2024-02-08-kvm-implementacao/"
+                href="http://localhost:1313/raphazilla/en-us/blog/2024-02-08-kvm-implementacao/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://localhost:1313/blog/2024-02-08-kvm-implementacao/"
+                href="http://localhost:1313/raphazilla/blog/2024-02-08-kvm-implementacao/"
                 />
   </url><url>
-    <loc>http://localhost:1313/tags/kvm/</loc>
+    <loc>http://localhost:1313/raphazilla/tags/kvm/</loc>
     <lastmod>2024-02-08T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="http://localhost:1313/en-us/tags/kvm/"
+                href="http://localhost:1313/raphazilla/en-us/tags/kvm/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://localhost:1313/tags/kvm/"
+                href="http://localhost:1313/raphazilla/tags/kvm/"
                 />
   </url><url>
-    <loc>http://localhost:1313/tags/resili%C3%AAncia/</loc>
+    <loc>http://localhost:1313/raphazilla/tags/resili%C3%AAncia/</loc>
     <lastmod>2024-02-08T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="http://localhost:1313/en-us/tags/resili%C3%AAncia/"
+                href="http://localhost:1313/raphazilla/en-us/tags/resili%C3%AAncia/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://localhost:1313/tags/resili%C3%AAncia/"
+                href="http://localhost:1313/raphazilla/tags/resili%C3%AAncia/"
                 />
   </url><url>
-    <loc>http://localhost:1313/blog/2024-02-07-kvm-avancado/</loc>
+    <loc>http://localhost:1313/raphazilla/blog/2024-02-07-kvm-avancado/</loc>
     <lastmod>2024-02-07T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="http://localhost:1313/en-us/blog/2024-02-07-kvm-avancado/"
+                href="http://localhost:1313/raphazilla/en-us/blog/2024-02-07-kvm-avancado/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://localhost:1313/blog/2024-02-07-kvm-avancado/"
+                href="http://localhost:1313/raphazilla/blog/2024-02-07-kvm-avancado/"
                 />
   </url><url>
-    <loc>http://localhost:1313/tags/cloud-init/</loc>
+    <loc>http://localhost:1313/raphazilla/tags/cloud-init/</loc>
     <lastmod>2024-02-07T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="http://localhost:1313/en-us/tags/cloud-init/"
+                href="http://localhost:1313/raphazilla/en-us/tags/cloud-init/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://localhost:1313/tags/cloud-init/"
+                href="http://localhost:1313/raphazilla/tags/cloud-init/"
                 />
   </url><url>
-    <loc>http://localhost:1313/tags/infraestrutura-como-c%C3%B3digo/</loc>
+    <loc>http://localhost:1313/raphazilla/tags/infraestrutura-como-c%C3%B3digo/</loc>
     <lastmod>2024-02-07T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="http://localhost:1313/en-us/tags/infraestrutura-como-c%C3%B3digo/"
+                href="http://localhost:1313/raphazilla/en-us/tags/infraestrutura-como-c%C3%B3digo/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://localhost:1313/tags/infraestrutura-como-c%C3%B3digo/"
+                href="http://localhost:1313/raphazilla/tags/infraestrutura-como-c%C3%B3digo/"
                 />
   </url><url>
-    <loc>http://localhost:1313/tags/qemu/</loc>
+    <loc>http://localhost:1313/raphazilla/tags/qemu/</loc>
     <lastmod>2024-02-07T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="http://localhost:1313/en-us/tags/qemu/"
+                href="http://localhost:1313/raphazilla/en-us/tags/qemu/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://localhost:1313/tags/qemu/"
+                href="http://localhost:1313/raphazilla/tags/qemu/"
                 />
   </url><url>
-    <loc>http://localhost:1313/blog/2024-02-06-kvm-qemu/</loc>
+    <loc>http://localhost:1313/raphazilla/blog/2024-02-06-kvm-qemu/</loc>
     <lastmod>2024-02-06T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="http://localhost:1313/en-us/blog/2024-02-06-kvm-qemu/"
+                href="http://localhost:1313/raphazilla/en-us/blog/2024-02-06-kvm-qemu/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://localhost:1313/blog/2024-02-06-kvm-qemu/"
+                href="http://localhost:1313/raphazilla/blog/2024-02-06-kvm-qemu/"
                 />
   </url><url>
-    <loc>http://localhost:1313/tags/automa%C3%A7%C3%A3o/</loc>
+    <loc>http://localhost:1313/raphazilla/tags/automa%C3%A7%C3%A3o/</loc>
     <lastmod>2024-02-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2024-02-05-cloud-init/</loc>
+    <loc>http://localhost:1313/raphazilla/blog/2024-02-05-cloud-init/</loc>
     <lastmod>2024-02-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/archives/</loc>
+    <loc>http://localhost:1313/raphazilla/archives/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="http://localhost:1313/en-us/archives/"
+                href="http://localhost:1313/raphazilla/en-us/archives/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://localhost:1313/archives/"
+                href="http://localhost:1313/raphazilla/archives/"
                 />
   </url><url>
-    <loc>http://localhost:1313/search/</loc>
+    <loc>http://localhost:1313/raphazilla/search/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="http://localhost:1313/en-us/search/"
+                href="http://localhost:1313/raphazilla/en-us/search/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://localhost:1313/search/"
+                href="http://localhost:1313/raphazilla/search/"
                 />
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>http://localhost:1313/raphazilla/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="http://localhost:1313/en-us/categories/"
+                href="http://localhost:1313/raphazilla/en-us/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://localhost:1313/categories/"
+                href="http://localhost:1313/raphazilla/categories/"
                 />
   </url>
 </urlset>

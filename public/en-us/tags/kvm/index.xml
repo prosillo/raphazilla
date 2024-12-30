@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>KVM on Raphazilla</title>
-    <link>http://localhost:1313/en-us/tags/kvm/</link>
+    <link>http://localhost:1313/raphazilla/en-us/tags/kvm/</link>
     <description>Recent content in KVM on Raphazilla</description>
     <generator>Hugo -- 0.140.1</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 08 Feb 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/en-us/tags/kvm/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/raphazilla/en-us/tags/kvm/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Implementando o KVM: Virtualização para Ambientes Resilientes</title>
-      <link>http://localhost:1313/en-us/blog/2024-02-08-kvm-implementacao/</link>
+      <link>http://localhost:1313/raphazilla/en-us/blog/2024-02-08-kvm-implementacao/</link>
       <pubDate>Thu, 08 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/en-us/blog/2024-02-08-kvm-implementacao/</guid>
-      <description>&lt;p&gt;&lt;img alt=&#34;Implementando o KVM&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/raphazilla/images/blog/imagem-kvm-qemu.png&#34;&gt;&lt;/p&gt;
+      <guid>http://localhost:1313/raphazilla/en-us/blog/2024-02-08-kvm-implementacao/</guid>
+      <description>&lt;p&gt;&lt;img alt=&#34;Implementando o KVM&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/raphazilla/raphazilla/images/blog/imagem-kvm-qemu.png&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;
 &lt;p&gt;A virtualização tornou-se uma peça fundamental na infraestrutura de TI, proporcionando flexibilidade, eficiência e resiliência. Neste artigo, exploraremos passo a passo a implementação do &lt;strong&gt;KVM (Kernel-based Virtual Machine)&lt;/strong&gt; como solução de virtualização, destacando requisitos, configurações essenciais e dois exemplos práticos de arquiteturas resilientes.&lt;/p&gt;
 &lt;h2 id=&#34;requisitos-necessários&#34;&gt;Requisitos Necessários&lt;/h2&gt;
@@ -24,21 +24,21 @@
     </item>
     <item>
       <title>Aprofundando no KVM: Desvendando Recursos Avançados de Virtualização</title>
-      <link>http://localhost:1313/en-us/blog/2024-02-07-kvm-avancado/</link>
+      <link>http://localhost:1313/raphazilla/en-us/blog/2024-02-07-kvm-avancado/</link>
       <pubDate>Wed, 07 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/en-us/blog/2024-02-07-kvm-avancado/</guid>
-      <description>&lt;p&gt;&lt;img alt=&#34;KVM Avançado&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/raphazilla/images/blog/imagem-kvm-qemu.png&#34;&gt;&lt;/p&gt;
+      <guid>http://localhost:1313/raphazilla/en-us/blog/2024-02-07-kvm-avancado/</guid>
+      <description>&lt;p&gt;&lt;img alt=&#34;KVM Avançado&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/raphazilla/raphazilla/images/blog/imagem-kvm-qemu.png&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;
-&lt;p&gt;Em nosso artigo anterior, exploramos o fascinante mundo da virtualização com &lt;strong&gt;KVM (Kernel-based Virtual Machine)&lt;/strong&gt; e &lt;strong&gt;QEMU (Quick Emulator)&lt;/strong&gt;. Agora, vamos aprofundar nosso conhecimento no KVM, explorando recursos avançados que elevam a virtualização a um novo patamar. Este artigo é a sequência natural, então, se você ainda não leu o artigo anterior, confira &lt;a href=&#34;http://localhost:1313/raphazilla/blog/kvm-qemu/&#34;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Em nosso artigo anterior, exploramos o fascinante mundo da virtualização com &lt;strong&gt;KVM (Kernel-based Virtual Machine)&lt;/strong&gt; e &lt;strong&gt;QEMU (Quick Emulator)&lt;/strong&gt;. Agora, vamos aprofundar nosso conhecimento no KVM, explorando recursos avançados que elevam a virtualização a um novo patamar. Este artigo é a sequência natural, então, se você ainda não leu o artigo anterior, confira &lt;a href=&#34;http://localhost:1313/raphazilla/raphazilla/blog/kvm-qemu/&#34;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;snapshot-e-clonagem-de-máquinas-virtuais&#34;&gt;Snapshot e Clonagem de Máquinas Virtuais&lt;/h2&gt;
 &lt;p&gt;Uma das características poderosas do KVM é a capacidade de criar snapshots de máquinas virtuais, permitindo a captura do estado atual da VM. Esses snapshots podem ser usados para backup, replicação ou para retornar a máquina virtual a um estado anterior. Vamos ver como criar um snapshot:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Explorando o Mundo do KVM e QEMU: Uma Jornada Virtual</title>
-      <link>http://localhost:1313/en-us/blog/2024-02-06-kvm-qemu/</link>
+      <link>http://localhost:1313/raphazilla/en-us/blog/2024-02-06-kvm-qemu/</link>
       <pubDate>Tue, 06 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/en-us/blog/2024-02-06-kvm-qemu/</guid>
-      <description>&lt;p&gt;&lt;img alt=&#34;KVM e QEMU&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/raphazilla/images/blog/imagem-kvm-qemu.png&#34;&gt;&lt;/p&gt;
+      <guid>http://localhost:1313/raphazilla/en-us/blog/2024-02-06-kvm-qemu/</guid>
+      <description>&lt;p&gt;&lt;img alt=&#34;KVM e QEMU&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/raphazilla/raphazilla/images/blog/imagem-kvm-qemu.png&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;
 &lt;p&gt;Bem-vindo a uma jornada pelo intrigante mundo da virtualização com &lt;strong&gt;KVM (Kernel-based Virtual Machine)&lt;/strong&gt; e &lt;strong&gt;QEMU (Quick Emulator)&lt;/strong&gt;. Nestes tempos onde a criação de ambientes virtuais é crucial, entender como essas ferramentas funcionam e se integram pode ser um diferencial significativo. Vamos explorar não apenas os conceitos básicos, mas também exemplos práticos de utilização e aplicações no mundo real.&lt;/p&gt;
 &lt;h2 id=&#34;kvm-a-base-da-virtualização&#34;&gt;KVM: A Base da Virtualização&lt;/h2&gt;

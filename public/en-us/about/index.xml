@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Abouts on Raphazilla</title>
-    <link>http://localhost:1313/en-us/about/</link>
+    <link>http://localhost:1313/raphazilla/en-us/about/</link>
     <description>Recent content in Abouts on Raphazilla</description>
     <generator>Hugo -- 0.140.1</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 29 Dec 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/en-us/about/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/raphazilla/en-us/about/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
-      <link>http://localhost:1313/en-us/about/about/</link>
+      <link>http://localhost:1313/raphazilla/en-us/about/about/</link>
       <pubDate>Sun, 29 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/en-us/about/about/</guid>
+      <guid>http://localhost:1313/raphazilla/en-us/about/about/</guid>
       <description>&lt;h1 id=&#34;about-this-blog&#34;&gt;About this blog&lt;/h1&gt;
 &lt;p&gt;Bem-vindo ao meu blog! Sou um entusiasta de tecnologia com paixão por aprender e compartilhar conhecimentos sobre programação, desenvolvimento web e inovação tecnológica.&lt;/p&gt;
 &lt;h2 id=&#34;minha-jornada&#34;&gt;Minha Jornada&lt;/h2&gt;

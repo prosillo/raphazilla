@@ -1,4 +1,4 @@
-baseURL: "http://localhost"
+baseURL: "https://github.io/raphazilla"
 title: "Raphazilla"
 theme: PaperMod
 languageCode: "pt-br"
