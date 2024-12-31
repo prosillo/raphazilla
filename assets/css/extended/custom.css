@@ -54,11 +54,11 @@ body {
 }
 
 .home-info, .post-list {
-    margin-bottom: 1px !important;
+    margin-bottom: 10px !important;
 }
 
 .post-list {
-    margin-top: 100px !important;
+    margin-top: 10px !important;
 }
 
 .container, .content-wrapper {
